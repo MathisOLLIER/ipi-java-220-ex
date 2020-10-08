@@ -35,7 +35,7 @@ public class Employe {
     public  String getPrenom() { return prenom; }
     public void setPrenom(String prenom) { this.prenom = prenom; }
     public  String getMatricule() { return matricule; }
-    public void setMatricule(String nom) { this.matricule = matricule; }
+    public void setMatricule(String matricule) { this.matricule = matricule; }
 
     public  LocalDate getDateEmbauche() { return dateEmbauche; }
     public void setDateEmbauche(LocalDate dateEmbauche) throws Exception {
