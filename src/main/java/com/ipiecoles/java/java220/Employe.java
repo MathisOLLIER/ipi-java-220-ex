@@ -22,14 +22,29 @@ public class Employe {
         this.salaire = salaire;
     }
 
+    public final Integer getNombreAnneeAnciennete(){
+        return LocalDate.now().getYear() - dateEmbauche.getYear();
+    }
+
+    public Integer getNbConges(){
+        return Entreprise.NB_CONGES_BASE;
+    }
+
     public  String getNom() { return nom; }
     public void setNom(String nom) { this.nom = nom; }
     public  String getPrenom() { return prenom; }
     public void setPrenom(String prenom) { this.prenom = prenom; }
     public  String getMatricule() { return matricule; }
     public void setMatricule(String nom) { this.matricule = matricule; }
+
     public  LocalDate getDateEmbauche() { return dateEmbauche; }
-    public void setDateEmbauche(LocalDate dateEmbauche) { this.dateEmbauche = dateEmbauche; }
+    public void setDateEmbauche(LocalDate dateEmbauche) throws Exception {
+        if (dateEmbauche != null && dateEmbauche.isAfter(LocalDate.now())){
+            throw new Exception("La date d'embauche ne peut être postérieure à la date courante");
+        }
+        this.dateEmbauche = dateEmbauche;
+    }
+
     public  Double getSalaire() { return salaire; }
     public void setSalaire(Double salaire) { this.salaire = salaire; }
 }
