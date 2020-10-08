@@ -82,7 +82,11 @@ public class Employe {
         this.salaire = this.getSalaire() * (1 + pourcentage);
     }
 
-  //  public getPrimeAnnuelle(){
-  //      return Entreprise.primeAnnuelleBase();
-  //  }
+    //public getPrimeAnnuelle(){
+      //  return Entreprise.primeAnnuelleBase();
+    //}
+
+    public  Double getPrimeAnnuelle(){
+        return Entreprise.primeAnnuelleBase();
+    }
 }
