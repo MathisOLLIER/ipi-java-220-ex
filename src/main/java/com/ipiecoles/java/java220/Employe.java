@@ -47,4 +47,15 @@ public class Employe {
 
     public  Double getSalaire() { return salaire; }
     public void setSalaire(Double salaire) { this.salaire = salaire; }
+
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", dateEmbauche=" + dateEmbauche +
+                ", salaire=" + salaire +
+                '}';
+    }
 }
