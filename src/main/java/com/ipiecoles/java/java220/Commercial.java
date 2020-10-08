@@ -10,4 +10,9 @@ public class Commercial  extends Employe {
     public void setCaAnnuel(Double caAnnuel) {
         this.caAnnuel = caAnnuel;
     }
+
+    @Override
+    public Double getPrimeAnnuelle(){
+        return Math.max(Math.ceil(this.getCaAnnuel()* 0.05), 500);
+    }
 }
