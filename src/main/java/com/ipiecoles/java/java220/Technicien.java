@@ -22,4 +22,9 @@ public class Technicien extends Employe{
     public void setGrade(Integer grade) {
         this.grade = grade;
     }
+
+    @Override
+    public void setSalaire(Double salaire) {
+        super.setSalaire(salaire * (1 + grade / 10d));
+    }
 }
